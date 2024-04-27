@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+        <img src="img/logo.jpg" class="left-logo-img" alt="">
+    </div>
+    <div class="main-login">
+      
+        <div class="left-login">
+            <h1>Faça seu login<br>Lance seu apontamento</h1>
+            <img src="img/grafico.svg" class="left-login-img" alt="Animação em 2D de uma astronauta em um traje verde flutuando entre estrelas e luas">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Digite seu usuário" id="usuario">
+                </div>
+                <div class="textfield"> 
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Digite a sua senha" id="senha">
+                </div>
+                <button class="btn-login" onclick="logar(); return false">LOGIN</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function logar(){
+            var login = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Seja Bem-Vindo!');
+                location.href = "pagina/index.html";
+            }else{
+                alert('Usuario ou senha incorretos');
+            }
+        }
+    </script>
+
+
+</body>
+</html>
